@@ -6,15 +6,24 @@ Storage template code to localStorage and memory to be prevent repeat request.
 根据name和url参数、使用Promise方法获取模板文件的一个jQuery插件。
 ## Usage
 
+### Config
 ```javascript
-$.when($.localStorageTpl('tpl_name', 'tpl_url.tpl'))
+$.tpl_list = {
+    'index': ['index', '/tpl/index.tpl'],
+    'login': ['login', '/tpl/login.tpl']
+};
+```
+
+### Get Template
+```javascript
+$.when($.localStorageTpl.apply(this, $.tpl_list.index))
 .then(function(tpl) {
 console.log(tpl);
 }, function(error) {
 console.log(error);
 });
 
-$.when($.lsTpl('tpl_name', 'tpl_url.tpl'))
+$.when($.localStorageTpl.apply(this, $.tpl_list.login))
 .then(function(tpl) {
 console.log(tpl);
 }, function(error) {
