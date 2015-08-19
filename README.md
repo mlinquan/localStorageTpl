@@ -8,25 +8,29 @@ Storage template code to localStorage and memory to be prevent repeat request.
 
 ### Config
 ```javascript
-$.tpl_list = {
-    'index': ['index', '/tpl/index.tpl'],
-    'login': ['login', '/tpl/login.tpl']
-};
+(function($) {
+    $.tpl_list = {
+        'index': ['index', '/tpl/index.tpl'],
+        'login': ['login', '/tpl/login.tpl']
+    };
+})(jQuery);
 ```
 
 ### Get Template
 ```javascript
-$.when($.localStorageTpl.apply(this, $.tpl_list.index))
-.then(function(tpl) {
-console.log(tpl);
-}, function(error) {
-console.log(error);
-});
+(function($) {
+    $.when($.localStorageTpl.apply(this, $.tpl_list.index))
+    .then(function(tpl) {
+        console.log(tpl);
+    }, function(error) {
+        console.log(error);
+    });
 
-$.when($.localStorageTpl.apply(this, $.tpl_list.login))
-.then(function(tpl) {
-console.log(tpl);
-}, function(error) {
-console.log(error);
-});
+    $.when($.localStorageTpl.apply(this, $.tpl_list.login))
+    .then(function(tpl) {
+        console.log(tpl);
+    }, function(error) {
+        console.log(error);
+    });
+})(jQuery);
 ```
