@@ -7,17 +7,17 @@ Storage template code to localStorage and memory to be prevent repeat request.
 ## Usage
 
 ```javascript
-    $.when($.localStorageTpl('index', '/'))
-    .then(function(tpl) {
-    console.log(tpl);
-    }, function(error) {
-    console.log(error);
-    });
+$.when($.localStorageTpl('tpl_name', 'tpl_url.tpl'))
+.then(function(tpl) {
+console.log(tpl);
+}, function(error) {
+console.log(error);
+});
 
-    $.when($.lsTpl('index', '/'))
-    .then(function(tpl) {
-    console.log(tpl);
-    }, function(error) {
-    console.log(error);
-    });
+$.when($.lsTpl('tpl_name', 'tpl_url.tpl'))
+.then(function(tpl) {
+console.log(tpl);
+}, function(error) {
+console.log(error);
+});
 ```
