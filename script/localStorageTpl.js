@@ -4,7 +4,7 @@
     } else {
         factory( jQuery );
     }
-} (function($) {
+}(function($) {
     $.lsTplList = {};
     $.lsTplPending = {};
 
@@ -74,4 +74,4 @@
     };
 
     $.localStorageTpl = $.lsTpl;
-})(jQuery);
+}));
