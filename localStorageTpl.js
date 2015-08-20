@@ -1,7 +1,7 @@
 $.lsTplList = {};
 $.lsTplPending = {};
 
-$.localStorageTpl = $.lsTpl = function(name, url) {
+$.lsTpl = function(name, url) {
     var _this = this;
     var deferred = $.Deferred();
     var tpl;
@@ -67,3 +67,5 @@ $.localStorageTpl = $.lsTpl = function(name, url) {
 };
 
 $.lsTpl.prototype.support = !!window.localStorage;
+
+$.localStorageTpl = $.lsTpl;
