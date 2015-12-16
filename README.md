@@ -9,24 +9,24 @@ Storage template code to localStorage and memory to be prevent repeat request.
 ### Config
 ```javascript
 (function($) {
-    $.tpl_list = {
-        'index': ['index', '/tpl/index.tpl'],
-        'login': ['login', '/tpl/login.tpl']
-    };
+    $.lsTpl.init({
+        index: '/tpl/index.tpl',
+        login: '/tpl/login.tpl'
+    });
 })(jQuery);
 ```
 
 ### Get Template
 ```javascript
 (function($) {
-    $.when($.localStorageTpl.apply(this, $.tpl_list.index))
+    $.when($.lsTpl.load('index'))
     .then(function(tpl) {
         console.log(tpl);
     }, function(error) {
         console.log(error);
     });
 
-    $.when($.localStorageTpl.apply(this, $.tpl_list.login))
+    $.when($.lsTpl.load('login'))
     .then(function(tpl) {
         console.log(tpl);
     }, function(error) {
