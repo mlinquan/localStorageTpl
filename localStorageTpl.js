@@ -100,7 +100,7 @@
                 });
             }
             return deferred.promise();
-        };
+        }
     };
 
     $.localStorageTpl = $.lsTpl;
