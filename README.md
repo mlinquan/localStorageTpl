@@ -34,3 +34,6 @@ Storage template code to localStorage and memory to be prevent repeat request.
     });
 })(jQuery);
 ```
+
+### DEMO
+http://mlinquan.github.io/localStorageTpl/
