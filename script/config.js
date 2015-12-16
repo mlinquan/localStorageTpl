@@ -1,6 +1,6 @@
 (function($) {
     $.lsTpl.init({
-        index: '/tpl/index.tpl',
-        login: '/tpl/login.tpl'
+        index: '/localStorageTpl/tpl/index.tpl',
+        login: '/localStorageTpl/tpl/login.tpl'
     });
 })(jQuery);
